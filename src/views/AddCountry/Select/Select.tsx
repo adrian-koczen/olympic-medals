@@ -7,10 +7,10 @@ import { ReactComponent as DownArrow } from "src/icons/downArrow.svg";
 interface Props {
   countries: Object;
   placeholder: string;
-  updateCountryName: (countryName: string, countryCode: string) => void;
+  updateCountry: (countryName: string, countryCode: string) => void;
 }
 
-const Select = ({ countries, placeholder, updateCountryName }: Props) => {
+const Select = ({ countries, placeholder, updateCountry }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleListVisibility = () => {
@@ -19,7 +19,7 @@ const Select = ({ countries, placeholder, updateCountryName }: Props) => {
 
   const handleSelectOption = (countryName: string, countryCode: string) => {
     handleListVisibility();
-    updateCountryName(countryName, countryCode);
+    updateCountry(countryName, countryCode);
   };
 
   return (
