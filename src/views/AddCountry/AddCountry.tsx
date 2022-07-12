@@ -10,8 +10,14 @@ import Select from "src/views/AddCountry/Select/Select";
 import styled from "styled-components";
 
 const formInitialValue = {
-  countryName: countries.AFG,
-  medalsCount: 0,
+  countryCode: "",
+  countryName: "Select country",
+  medals: {
+    total: 0,
+    bronze: 0,
+    silver: 0,
+    gold: 0,
+  },
 };
 
 const AddCountry = () => {
@@ -22,7 +28,8 @@ const AddCountry = () => {
     },
   });
 
-  const updateCountryName = (countryName: string) => {
+  const updateCountryName = (countryName: string, countryCode: string) => {
+    formik.setFieldValue("countryCode", countryCode);
     formik.setFieldValue("countryName", countryName);
   };
 

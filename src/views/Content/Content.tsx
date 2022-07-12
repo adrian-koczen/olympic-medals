@@ -48,7 +48,6 @@ const TabsSelectContainer = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
-  margin: 16px 0;
 `;
 
 export default Content;

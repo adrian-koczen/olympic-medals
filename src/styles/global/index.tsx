@@ -10,6 +10,6 @@ export default createGlobalStyle`
   }
   body {
     background-color: #F1F5F8;
-    min-width: 344px;
+    min-width: 375px;
   }
 `;

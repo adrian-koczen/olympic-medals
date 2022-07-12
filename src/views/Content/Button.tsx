@@ -23,7 +23,6 @@ const DotIcon = styled.div<{ active: boolean }>`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin: 0 8px;
   background-color: ${(props) =>
     props.active
       ? ({ theme }) => theme.colors.pink
@@ -37,7 +36,8 @@ const Container = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 15px;
   padding: 10px 20px;
-  width: 45%;
+  flex-grow: 1;
+  margin: 8px;
   background-color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
