@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { IContext, State, Props, NewCountry } from "./interfaces";
+import { IContext, State, Props, NewCountry, Medals } from "./interfaces";
 
 const initialValue = {
   addCountry: () => {},
@@ -33,9 +33,16 @@ const AppState = ({ children }: Props) => {
     });
   };
 
+  const countTotalMedals = (medals: Medals) => {
+    return Number(medals.bronze) + Number(medals.silver) + Number(medals.gold);
+  };
+
   const addCountry = ({ countryName, countryCode, medals }: NewCountry) => {
     // Check if country is already in list
     const isCountryInArrayIndex = findCountryInArray(countryCode);
+
+    // Generate total number of medals
+    const totalMedals = countTotalMedals(medals);
 
     // Generate new element
     const id =
@@ -46,7 +53,7 @@ const AppState = ({ children }: Props) => {
       id: id,
       countryCode: countryCode,
       countryName: countryName,
-      medals: medals,
+      medals: { ...medals, total: totalMedals },
     };
     let newState = { ...appState };
 

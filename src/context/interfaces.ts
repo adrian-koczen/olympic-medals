@@ -1,4 +1,4 @@
-type Medals = {
+export type Medals = {
   total: number;
   bronze: number;
   silver: number;
