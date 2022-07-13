@@ -9,14 +9,6 @@ import { Country } from "src/context/interfaces";
 // Icons
 import { ReactComponent as DownArrow } from "src/icons/downArrow.svg";
 import { ReactComponent as UpArrow } from "src/icons/upArrow.svg";
-// Interfaces, types
-import { boolean } from "yup/lib/locale";
-
-// enum SortVariables {
-//   bronze = "bronze",
-//   silver = " silver",
-//   gold = "gold",
-// }
 
 enum SortBy {
   bronze = "bronze",
@@ -25,14 +17,12 @@ enum SortBy {
   total = "total",
 }
 
-type SortType = "DESC" | "ASC";
-
 interface SortState {
   total: boolean;
 }
 
 const SortStateInitialVales = {
-  total: false,
+  total: true,
 };
 
 const Table = () => {
@@ -63,9 +53,11 @@ const Table = () => {
     updateCountries();
   }, []);
 
-  // useEffect(() => {
-  //   sortList(SortBy.total);
-  // }, [countries]);
+  useEffect(() => {
+    if (countries.length > 0) {
+      sortList(SortBy.total);
+    }
+  }, [countries]);
 
   return (
     <Box title="Table">
