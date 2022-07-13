@@ -1,16 +1,30 @@
 import React, { useState } from "react";
 // Styled components
 import styled from "styled-components";
+// Components
+import Error from "src/components/Error/Error";
 // Icons
 import { ReactComponent as DownArrow } from "src/icons/downArrow.svg";
 
 interface Props {
   countries: Object;
   placeholder: string;
-  updateCountry: (countryName: string, countryCode: string) => void;
+  errors: string | undefined;
+  setValue: (
+    field: string,
+    value: any,
+    shouldValidate?: boolean | undefined
+  ) => void;
+  setError: (field: string, value: string | undefined) => void;
 }
 
-const Select = ({ countries, placeholder, updateCountry }: Props) => {
+const Select = ({
+  countries,
+  placeholder,
+  setValue,
+  setError,
+  errors,
+}: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleListVisibility = () => {
@@ -19,7 +33,9 @@ const Select = ({ countries, placeholder, updateCountry }: Props) => {
 
   const handleSelectOption = (countryName: string, countryCode: string) => {
     handleListVisibility();
-    updateCountry(countryName, countryCode);
+    setValue("countryCode", countryCode, false);
+    setValue("countryName", countryName, false);
+    setError("countryCode", undefined);
   };
 
   return (
@@ -42,6 +58,7 @@ const Select = ({ countries, placeholder, updateCountry }: Props) => {
           })}
         </List>
       )}
+      {errors !== undefined && <Error>{errors}</Error>}
     </Container>
   );
 };

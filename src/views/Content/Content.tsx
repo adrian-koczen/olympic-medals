@@ -6,7 +6,9 @@ import Button from "./Button";
 import Box from "src/components/Box/Box";
 // Interfaces
 import { Tabs } from "./interfaces";
-import AddCountry from "../AddCountry/AddCountry";
+// Views
+import AddCountry from "src/views/AddCountry/AddCountry";
+import Table from "src/views/Table/Table";
 
 const initialState = Tabs.addCountry;
 
@@ -38,6 +40,7 @@ const Content = () => {
         </TabsSelectContainer>
       </Box>
       {activeTab === Tabs.addCountry && <AddCountry />}
+      {activeTab === Tabs.table && <Table />}
     </React.Fragment>
   );
 };

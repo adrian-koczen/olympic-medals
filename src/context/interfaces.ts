@@ -18,6 +18,7 @@ export interface State {
 
 export interface IContext {
   addCountry: ({ countryName, medals }: NewCountry) => void;
+  getCountriesList: () => State | void;
 }
 
 export interface Props {

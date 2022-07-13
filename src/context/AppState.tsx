@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { IContext, State, Props, NewCountry } from "./interfaces";
 
 const initialValue = {
   addCountry: ({ countryName, countryCode, medals }: NewCountry) => {},
+  getCountriesList: () => {},
 };
 
 const Context = createContext<IContext>(initialValue);
@@ -10,8 +11,23 @@ const Context = createContext<IContext>(initialValue);
 const AppState = ({ children }: Props) => {
   const [appState, setAppState] = useState<State>({ countries: [] });
 
+  useEffect(() => {
+    console.log(appState);
+  }, [appState]);
+
+  const findCountryInArray = (countryCode: string) => {
+    return appState.countries.findIndex((el, index) => {
+      return el.countryCode === countryCode;
+    });
+  };
+
   const addCountry = ({ countryName, countryCode, medals }: NewCountry) => {
-    const id = appState.countries.length > 0 ? appState.countries.length : 0;
+    // Check if country is already in list
+    const isCountryInArray = findCountryInArray(countryCode);
+
+    // Generate new element
+    const id =
+      isCountryInArray !== -1 ? isCountryInArray : appState.countries.length;
     const newElement = {
       id: id,
       countryCode: countryCode,
@@ -19,11 +35,25 @@ const AppState = ({ children }: Props) => {
       medals: medals,
     };
     let newState = { ...appState };
-    newState.countries.push(newElement);
-    setAppState(newState);
+
+    if (isCountryInArray !== -1) {
+      newState.countries[isCountryInArray] = newElement;
+      setAppState(newState);
+    } else {
+      newState.countries.push(newElement);
+      setAppState(newState);
+    }
   };
 
-  return <Context.Provider value={{ addCountry }}>{children}</Context.Provider>;
+  const getCountriesList = () => {
+    return appState;
+  };
+
+  return (
+    <Context.Provider value={{ addCountry, getCountriesList }}>
+      {children}
+    </Context.Provider>
+  );
 };
 
 export default AppState;

@@ -4,6 +4,8 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 // Data
 import countries from "src/data/countries.json";
+// Context
+import { useAppState } from "src/context/AppState";
 // Components
 import Box from "src/components/Box/Box";
 import Select from "src/views/AddCountry/Select/Select";
@@ -15,6 +17,7 @@ import styled from "styled-components";
 import { Medals } from "./interfaces";
 
 const validationSchema = yup.object().shape({
+  countryCode: yup.string().required("Please select country"),
   medals: yup.object({
     bronze: yup.number().min(0, "Field must be greater than or equal to 0"),
     silver: yup.number().min(0, "Field must be greater than or equal to 0"),
@@ -34,6 +37,8 @@ const formInitialValue = {
 };
 
 const AddCountry = () => {
+  const AppState = useAppState();
+
   const formik = useFormik({
     initialValues: formInitialValue,
     validationSchema: validationSchema,
@@ -44,15 +49,7 @@ const AddCountry = () => {
 
   const addCountryToTable = () => {
     const newElement = formik.values;
-    if (newElement.countryCode.length) {
-    } else {
-      console.log(formik.errors);
-    }
-  };
-
-  const updateCountry = (countryName: string, countryCode: string) => {
-    formik.setFieldValue("countryCode", countryCode);
-    formik.setFieldValue("countryName", countryName);
+    AppState.addCountry(newElement);
   };
 
   return (
@@ -63,7 +60,9 @@ const AddCountry = () => {
           <Select
             countries={countries}
             placeholder={formik.values.countryName}
-            updateCountry={updateCountry}
+            setValue={formik.setFieldValue}
+            errors={formik.errors.countryCode}
+            setError={formik.setFieldError}
           ></Select>
         </FormElement>
         <Label>Medals</Label>
