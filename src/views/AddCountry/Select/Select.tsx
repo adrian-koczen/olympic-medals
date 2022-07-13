@@ -58,6 +58,19 @@ const List = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.gray};
   position: absolute;
   background-color: ${({ theme }) => theme.colors.white};
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.lightGray};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.darkGray};
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.gray};
+  }
 `;
 
 const Option = styled.div`

@@ -1,16 +1,26 @@
 import React from "react";
 // Formik
 import { useFormik } from "formik";
+import * as yup from "yup";
 // Data
 import countries from "src/data/countries.json";
 // Components
 import Box from "src/components/Box/Box";
 import Select from "src/views/AddCountry/Select/Select";
 import Medal from "./Medal/Medal";
+import Button from "src/components/Button/Button";
 // Styled components
 import styled from "styled-components";
 // Interfaces/Types
-import { Medals, MedalsCount } from "./interfaces";
+import { Medals } from "./interfaces";
+
+const validationSchema = yup.object().shape({
+  medals: yup.object({
+    bronze: yup.number().min(0, "Field must be greater than or equal to 0"),
+    silver: yup.number().min(0, "Field must be greater than or equal to 0"),
+    gold: yup.number().min(0, "Field must be greater than or equal to 0"),
+  }),
+});
 
 const formInitialValue = {
   countryCode: "",
@@ -26,10 +36,19 @@ const formInitialValue = {
 const AddCountry = () => {
   const formik = useFormik({
     initialValues: formInitialValue,
+    validationSchema: validationSchema,
     onSubmit: () => {
-      console.log(formik.values);
+      addCountryToTable();
     },
   });
+
+  const addCountryToTable = () => {
+    const newElement = formik.values;
+    if (newElement.countryCode.length) {
+    } else {
+      console.log(formik.errors);
+    }
+  };
 
   const updateCountry = (countryName: string, countryCode: string) => {
     formik.setFieldValue("countryCode", countryCode);
@@ -55,6 +74,7 @@ const AddCountry = () => {
             value={formik.values.medals.bronze}
             onChange={formik.handleChange}
             setValue={formik.setFieldValue}
+            errors={formik.errors.medals?.bronze}
           />
         </FormElement>
         <FormElement>
@@ -64,6 +84,7 @@ const AddCountry = () => {
             value={formik.values.medals.silver}
             onChange={formik.handleChange}
             setValue={formik.setFieldValue}
+            errors={formik.errors.medals?.silver}
           />
         </FormElement>
         <FormElement>
@@ -73,9 +94,10 @@ const AddCountry = () => {
             value={formik.values.medals.gold}
             onChange={formik.handleChange}
             setValue={formik.setFieldValue}
+            errors={formik.errors.medals?.gold}
           />
         </FormElement>
-        <button type="submit">Hello</button>
+        <Button type="submit">Add country</Button>
       </Form>
     </Box>
   );

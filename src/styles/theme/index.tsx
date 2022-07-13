@@ -5,6 +5,7 @@ interface Theme {
     darkGray: string;
     white: string;
     pink: string;
+    error: string;
   };
 }
 
@@ -15,6 +16,7 @@ const theme: Theme = {
     darkGray: "#3e4851",
     white: "#ffffff",
     pink: "#ED3F58",
+    error: "#f7bdbd",
   },
 };
 
