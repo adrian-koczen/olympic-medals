@@ -5,7 +5,7 @@ type Medals = {
   gold: number;
 };
 
-type Country = {
+export type Country = {
   id: number;
   countryCode: string;
   countryName: string;
@@ -18,7 +18,8 @@ export interface State {
 
 export interface IContext {
   addCountry: ({ countryName, medals }: NewCountry) => void;
-  getCountriesList: () => State | void;
+  getCountriesList: () => Country[] | [];
+  saveState: () => void;
 }
 
 export interface Props {

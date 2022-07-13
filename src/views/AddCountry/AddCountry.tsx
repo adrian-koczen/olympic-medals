@@ -50,6 +50,7 @@ const AddCountry = () => {
   const addCountryToTable = () => {
     const newElement = formik.values;
     AppState.addCountry(newElement);
+    AppState.saveState();
   };
 
   return (

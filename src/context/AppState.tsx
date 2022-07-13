@@ -2,8 +2,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { IContext, State, Props, NewCountry } from "./interfaces";
 
 const initialValue = {
-  addCountry: ({ countryName, countryCode, medals }: NewCountry) => {},
-  getCountriesList: () => {},
+  addCountry: () => {},
+  getCountriesList: () => [],
+  saveState: () => {},
 };
 
 const Context = createContext<IContext>(initialValue);
@@ -11,9 +12,20 @@ const Context = createContext<IContext>(initialValue);
 const AppState = ({ children }: Props) => {
   const [appState, setAppState] = useState<State>({ countries: [] });
 
+  const loadFromLocalStorage = () => {
+    const data = localStorage.getItem("appState");
+    if (data !== null) {
+      setAppState(JSON.parse(data));
+    }
+  };
+
+  const saveState = () => {
+    localStorage.setItem("appState", JSON.stringify(appState));
+  };
+
   useEffect(() => {
-    console.log(appState);
-  }, [appState]);
+    loadFromLocalStorage();
+  }, []);
 
   const findCountryInArray = (countryCode: string) => {
     return appState.countries.findIndex((el, index) => {
@@ -23,11 +35,13 @@ const AppState = ({ children }: Props) => {
 
   const addCountry = ({ countryName, countryCode, medals }: NewCountry) => {
     // Check if country is already in list
-    const isCountryInArray = findCountryInArray(countryCode);
+    const isCountryInArrayIndex = findCountryInArray(countryCode);
 
     // Generate new element
     const id =
-      isCountryInArray !== -1 ? isCountryInArray : appState.countries.length;
+      isCountryInArrayIndex !== -1
+        ? isCountryInArrayIndex
+        : appState.countries.length;
     const newElement = {
       id: id,
       countryCode: countryCode,
@@ -36,8 +50,9 @@ const AppState = ({ children }: Props) => {
     };
     let newState = { ...appState };
 
-    if (isCountryInArray !== -1) {
-      newState.countries[isCountryInArray] = newElement;
+    // Replace old element or add new to list
+    if (isCountryInArrayIndex !== -1) {
+      newState.countries[isCountryInArrayIndex] = newElement;
       setAppState(newState);
     } else {
       newState.countries.push(newElement);
@@ -46,11 +61,11 @@ const AppState = ({ children }: Props) => {
   };
 
   const getCountriesList = () => {
-    return appState;
+    return appState.countries;
   };
 
   return (
-    <Context.Provider value={{ addCountry, getCountriesList }}>
+    <Context.Provider value={{ addCountry, getCountriesList, saveState }}>
       {children}
     </Context.Provider>
   );
