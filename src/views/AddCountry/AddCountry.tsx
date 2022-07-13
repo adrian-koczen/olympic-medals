@@ -10,7 +10,7 @@ import Medal from "./Medal/Medal";
 // Styled components
 import styled from "styled-components";
 // Interfaces/Types
-import { Medals } from "./interfaces";
+import { Medals, MedalsCount } from "./interfaces";
 
 const formInitialValue = {
   countryCode: "",
@@ -26,7 +26,7 @@ const formInitialValue = {
 const AddCountry = () => {
   const formik = useFormik({
     initialValues: formInitialValue,
-    onSubmit: (e) => {
+    onSubmit: () => {
       console.log(formik.values);
     },
   });
@@ -34,10 +34,6 @@ const AddCountry = () => {
   const updateCountry = (countryName: string, countryCode: string) => {
     formik.setFieldValue("countryCode", countryCode);
     formik.setFieldValue("countryName", countryName);
-  };
-
-  const updateMedals = (medals: Medals) => {
-    formik.setFieldValue("medals", medals);
   };
 
   return (
@@ -55,25 +51,28 @@ const AddCountry = () => {
         <FormElement>
           <Label>Bronze</Label>
           <Medal
-            name="medals.bronze"
+            name={Medals.bronze}
             value={formik.values.medals.bronze}
             onChange={formik.handleChange}
+            setValue={formik.setFieldValue}
           />
         </FormElement>
         <FormElement>
           <Label>Silver</Label>
           <Medal
-            name="medals.silver"
+            name={Medals.silver}
             value={formik.values.medals.silver}
             onChange={formik.handleChange}
+            setValue={formik.setFieldValue}
           />
         </FormElement>
         <FormElement>
           <Label>Gold</Label>
           <Medal
-            name="medals.gold"
+            name={Medals.gold}
             value={formik.values.medals.gold}
             onChange={formik.handleChange}
+            setValue={formik.setFieldValue}
           />
         </FormElement>
         <button type="submit">Hello</button>

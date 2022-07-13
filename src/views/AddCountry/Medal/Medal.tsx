@@ -1,33 +1,42 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // Styled components
 import styled from "styled-components";
+// Interfaces types
+import { Medals } from "../interfaces";
 
-const Medal = ({ name, value, onChange }: any) => {
-  const InputRef = useRef<HTMLInputElement>(null);
+interface Props {
+  name: Medals;
+  value: number;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setValue: (name: Medals, value: string) => void;
+}
 
+const Medal = ({ name, value, onChange, setValue }: Props) => {
   const addition = () => {
-    if (InputRef.current !== null) {
-      InputRef.current.value = (Number(InputRef.current?.value) + 1).toString();
-    }
+    const newValue = (Number(value) + 1).toString();
+    setValue(name, newValue);
   };
 
   const subtraction = () => {
-    if (InputRef.current !== null) {
-      InputRef.current.value = (Number(InputRef.current?.value) - 1).toString();
-    }
+    const newValue = (Number(value) - 1).toString();
+    setValue(name, newValue);
+  };
+
+  const handle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    onChange(e);
   };
 
   return (
     <Container>
-      <div onClick={() => addition()}>Plus</div>
+      <div onClick={() => addition()}>addition</div>
       <Input
-        ref={InputRef}
         name={name}
         value={value}
         type="number"
-        onChange={onChange}
+        onChange={(e) => handle(e)}
       ></Input>
-      <div onClick={() => subtraction()}>Minus</div>
+      <div onClick={() => subtraction()}>subtraction</div>
     </Container>
   );
 };
