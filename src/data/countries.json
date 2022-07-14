@@ -288,140 +288,548 @@
     "fullName": "Greece",
     "imageSrc": "gr"
   },
-  "GRN": "Grenada",
-  "GUM": "Guam",
-  "GUA": "Guatemala",
-  "GCI": "Guernsey",
-  "GUI": "Guinea",
-  "GBS": "Guinea-bissau",
-  "GUY": "Guyana",
-  "HAI": "Haiti",
-  "HON": "Honduras",
-  "HKG": "Hong Kong",
-  "HUN": "Hungary",
-  "ISL": "Iceland",
-  "IND": "India",
-  "INA": "Indonesia",
-  "IRI": "Iran",
-  "IRQ": "Iraq",
-  "IRL": "Ireland",
-  "ISR": "Israel",
-  "ITA": "Italy",
-  "JAM": "Jamaica",
-  "JPN": "Japan",
-  "JCI": "Jersey",
-  "JOR": "Jordan",
-  "KAZ": "Kazakhstan",
-  "KEN": "Kenya",
-  "KIR": "Kiribati",
-  "PRK": "North Korea",
-  "KOR": "South Korea",
-  "KUW": "Kuwait",
-  "KGZ": "Kyrgyzstan",
-  "LAO": "Lao People's Democratic Republic",
-  "LAT": "Latvia",
-  "LIB": "Lebanon",
-  "LES": "Lesotho",
-  "LBR": "Liberia",
-  "LBA": "Libya",
-  "LIE": "Liechtenstein",
-  "LTU": "Lithuania",
-  "LUX": "Luxembourg",
-  "MAC": "Macao",
-  "MKD": "Macedonia",
-  "MAD": "Madagascar",
-  "MAW": "Malawi",
-  "MAS": "Malaysia",
-  "MDV": "Maldives",
-  "MLI": "Mali",
-  "MLT": "Malta",
-  "MHL": "Marshall Islands",
-  "MTN": "Mauritania",
-  "MRI": "Mauritius",
-  "MEX": "Mexico",
-  "MDA": "Moldova",
-  "MON": "Monaco",
-  "MGL": "Mongolia",
-  "MNE": "Montenegro",
-  "MAR": "Morocco",
-  "MOZ": "Mozambique",
-  "MYA": "Myanmar",
-  "NAM": "Namibia",
-  "NRU": "Nauru",
-  "NEP": "Nepal",
-  "NED": "Netherlands",
-  "NZL": "New Zealand",
-  "NCA": "Nicaragua",
-  "NIG": "Niger",
-  "NGR": "Nigeria",
-  "NOR": "Norway",
-  "OMA": "Oman",
-  "PAK": "Pakistan",
-  "PLW": "Palau",
-  "PLE": "Palestinian Territory",
-  "PAN": "Panama",
-  "PNG": "Papua New Guinea",
-  "PAR": "Paraguay",
-  "PER": "Peru",
-  "PHI": "Philippines",
-  "POL": "Poland",
-  "POR": "Portugal",
-  "PUR": "Puerto Rico",
-  "QAT": "Qatar",
-  "CGO": "Republic Of Congo",
-  "ROU": "Romania",
-  "RUS": "Russian Federation",
-  "RWA": "Rwanda",
-  "SKN": "Saint Kitts And Nevis",
-  "LCA": "Saint Lucia",
-  "VIN": "Saint Vincent And The Grenadines",
-  "SAM": "Samoa",
-  "SMR": "San Marino",
-  "KSA": "Saudi Arabia",
-  "SEN": "Senegal",
-  "SRB": "Serbia",
-  "SEY": "Seychelles",
-  "SLE": "Sierra Leone",
-  "SIN": "Singapore",
-  "SVK": "Slovakia",
-  "SLO": "Slovenia",
-  "SOL": "Solomon Islands",
-  "SOM": "Somalia",
-  "RSA": "South Africa",
-  "ESP": "Spain",
-  "SRI": "Sri Lanka",
-  "SUD": "Sudan",
-  "SUR": "Suriname",
-  "SWZ": "Swaziland",
-  "SWE": "Sweden",
-  "SUI": "Switzerland",
-  "SYR": "Syrian Arab Republic",
-  "STP": "São Tomé and Príncipe",
-  "TPE": "Taiwan",
-  "TJK": "Tajikistan",
-  "TAN": "Tanzania",
-  "THA": "Thailand",
-  "TLS": "Timor-Leste",
-  "TOG": "Togo",
-  "TGA": "Tonga",
-  "TRI": "Trinidad And Tobago",
-  "TUN": "Tunisia",
-  "TUR": "Turkey",
-  "TKM": "Turkmenistan",
-  "TUV": "Tuvalu",
-  "UGA": "Uganda",
-  "UKR": "Ukraine",
-  "UAE": "United Arab Emirates",
-  "GBR": "United Kingdom",
-  "USA": "United States",
-  "URU": "Uruguay",
-  "UZB": "Uzbekistan",
-  "VAN": "Vanuatu",
-  "VEN": "Venezuela",
-  "VIE": "Viet Nam",
-  "ISV": "Virgin Islands (British)",
-  "ISV": "Virgin Islands (US)",
-  "YEM": "Yemen",
-  "ZAM": "Zambia",
-  "ZIM": "Zimbabwe"
+  "GRN": {
+    "fullName": "Grenada",
+    "imageSrc": "gn"
+  },
+  "GUM": {
+    "fullName": "Guam",
+    "imageSrc": "gu"
+  },
+  "GUA": {
+    "fullName": "Guatemala",
+    "imageSrc": "gt"
+  },
+  "GCI": {
+    "fullName": "Guernsey",
+    "imageSrc": "gy"
+  },
+  "GUI": {
+    "fullName": "Guinea",
+    "imageSrc": "ga"
+  },
+  "GBS": {
+    "fullName": "Guinea-bissau",
+    "imageSrc": "gs"
+  },
+  "GUY": {
+    "fullName": "Guyana",
+    "imageSrc": "gy"
+  },
+  "HAI": {
+    "fullName": "Haiti",
+    "imageSrc": "ht"
+  },
+  "HON": {
+    "fullName": "Honduras",
+    "imageSrc": "hn"
+  },
+  "HKG": {
+    "fullName": "Hong Kong",
+    "imageSrc": "hk"
+  },
+  "HUN": {
+    "fullName": "Hungary",
+    "imageSrc": "hr"
+  },
+  "ISL": {
+    "fullName": "Iceland",
+    "imageSrc": "ic"
+  },
+  "IND": {
+    "fullName": "India",
+    "imageSrc": "in"
+  },
+  "INA": {
+    "fullName": "Indonesia",
+    "imageSrc": "id"
+  },
+  "IRI": {
+    "fullName": "Iran",
+    "imageSrc": "ir"
+  },
+  "IRQ": {
+    "fullName": "Iraq",
+    "imageSrc": "iq"
+  },
+  "IRL": {
+    "fullName": "Ireland",
+    "imageSrc": "il"
+  },
+  "ISR": {
+    "fullName": "Israel",
+    "imageSrc": "is"
+  },
+  "ITA": {
+    "fullName": "Italy",
+    "imageSrc": "it"
+  },
+  "JAM": {
+    "fullName": "Jamaica",
+    "imageSrc": "jm"
+  },
+  "JPN": {
+    "fullName": "Japan",
+    "imageSrc": "jp"
+  },
+  "JCI": {
+    "fullName": "Jersey",
+    "imageSrc": "je"
+  },
+  "JOR": {
+    "fullName": "Jordan",
+    "imageSrc": "jo"
+  },
+  "KAZ": {
+    "fullName": "Kazakhstan",
+    "imageSrc": "kz"
+  },
+  "KEN": {
+    "fullName": "Kenya",
+    "imageSrc": "ky"
+  },
+  "KIR": {
+    "fullName": "Kiribati",
+    "imageSrc": "ki"
+  },
+  "PRK": {
+    "fullName": "North Korea",
+    "imageSrc": "kp"
+  },
+  "KOR": {
+    "fullName": "South Korea",
+    "imageSrc": "kr"
+  },
+  "KUW": {
+    "fullName": "Kuwait",
+    "imageSrc": "kw"
+  },
+  "KGZ": {
+    "fullName": "Kyrgyzstan",
+    "imageSrc": "kg"
+  },
+  "LAO": {
+    "fullName": "Lao People's Democratic Republic",
+    "imageSrc": "cd"
+  },
+  "LAT": {
+    "fullName": "Latvia",
+    "imageSrc": "lv"
+  },
+  "LIB": {
+    "fullName": "Lebanon",
+    "imageSrc": "lb"
+  },
+  "LES": {
+    "fullName": "Lesotho",
+    "imageSrc": "ls"
+  },
+  "LBR": {
+    "fullName": "Liberia",
+    "imageSrc": "lr"
+  },
+  "LBA": {
+    "fullName": "Libya",
+    "imageSrc": "ly"
+  },
+  "LIE": {
+    "fullName": "Liechtenstein",
+    "imageSrc": "li"
+  },
+  "LTU": {
+    "fullName": "Lithuania",
+    "imageSrc": "lt"
+  },
+  "LUX": {
+    "fullName": "Luxembourg",
+    "imageSrc": "lu"
+  },
+  "MAC": {
+    "fullName": "Macao",
+    "imageSrc": "mo"
+  },
+  "MKD": {
+    "fullName": "Macedonia",
+    "imageSrc": "mk"
+  },
+  "MAD": {
+    "fullName": "Madagascar",
+    "imageSrc": "mg"
+  },
+  "MAW": {
+    "fullName": "Malawi",
+    "imageSrc": "mw"
+  },
+  "MAS": {
+    "fullName": "Malaysia",
+    "imageSrc": "my"
+  },
+  "MDV": {
+    "fullName": "Maldives",
+    "imageSrc": "mv"
+  },
+  "MLI": {
+    "fullName": "Mali",
+    "imageSrc": "ml"
+  },
+  "MLT": {
+    "fullName": "Malta",
+    "imageSrc": "mt"
+  },
+  "MHL": {
+    "fullName": "Marshall Islands",
+    "imageSrc": "mh"
+  },
+  "MTN": {
+    "fullName": "Mauritania",
+    "imageSrc": "mr"
+  },
+  "MRI": {
+    "fullName": "Mauritius",
+    "imageSrc": "mu"
+  },
+  "MEX": {
+    "fullName": "Mexico",
+    "imageSrc": "mx"
+  },
+  "MDA": {
+    "fullName": "Moldova",
+    "imageSrc": "md"
+  },
+  "MON": {
+    "fullName": "Monaco",
+    "imageSrc": "mc"
+  },
+  "MGL": {
+    "fullName": "Mongolia",
+    "imageSrc": "mn"
+  },
+  "MNE": {
+    "fullName": "Montenegro",
+    "imageSrc": "me"
+  },
+  "MAR": {
+    "fullName": "Morocco",
+    "imageSrc": "ma"
+  },
+  "MOZ": {
+    "fullName": "Mozambique",
+    "imageSrc": "mz"
+  },
+  "MYA": {
+    "fullName": "Myanmar",
+    "imageSrc": "mm"
+  },
+  "NAM": {
+    "fullName": "Namibia",
+    "imageSrc": "na"
+  },
+  "NRU": {
+    "fullName": "Nauru",
+    "imageSrc": "nr"
+  },
+  "NEP": {
+    "fullName": "Nepal",
+    "imageSrc": "np"
+  },
+  "NED": {
+    "fullName": "Netherlands",
+    "imageSrc": "nl"
+  },
+  "NZL": {
+    "fullName": "New Zealand",
+    "imageSrc": "nz"
+  },
+  "NCA": {
+    "fullName": "Nicaragua",
+    "imageSrc": "ni"
+  },
+  "NIG": {
+    "fullName": "Niger",
+    "imageSrc": "ne"
+  },
+  "NGR": {
+    "fullName": "Nigeria",
+    "imageSrc": "ng"
+  },
+  "NOR": {
+    "fullName": "Norway",
+    "imageSrc": "no"
+  },
+  "OMA": {
+    "fullName": "Oman",
+    "imageSrc": "om"
+  },
+  "PAK": {
+    "fullName": "Pakistan",
+    "imageSrc": "pk"
+  },
+  "PLW": {
+    "fullName": "Palau",
+    "imageSrc": "pw"
+  },
+  "PLE": {
+    "fullName": "Palestinian Territory",
+    "imageSrc": "ps"
+  },
+  "PAN": {
+    "fullName": "Panama",
+    "imageSrc": "pa"
+  },
+  "PNG": {
+    "fullName": "Papua New Guinea",
+    "imageSrc": "pg"
+  },
+  "PAR": {
+    "fullName": "Paraguay",
+    "imageSrc": "py"
+  },
+  "PER": {
+    "fullName": "Peru",
+    "imageSrc": "pe"
+  },
+  "PHI": {
+    "fullName": "Philippines",
+    "imageSrc": "ph"
+  },
+  "POL": {
+    "fullName": "Poland",
+    "imageSrc": "pl"
+  },
+  "POR": {
+    "fullName": "Portugal",
+    "imageSrc": "pt"
+  },
+  "PUR": {
+    "fullName": "Puerto Rico",
+    "imageSrc": "pr"
+  },
+  "QAT": {
+    "fullName": "Qatar",
+    "imageSrc": "qa"
+  },
+  "CGO": {
+    "fullName": "Republic Of Congo",
+    "imageSrc": "cg"
+  },
+  "ROU": {
+    "fullName": "Romania",
+    "imageSrc": "ro"
+  },
+  "RUS": {
+    "fullName": "Russian Federation",
+    "imageSrc": "ru"
+  },
+  "RWA": {
+    "fullName": "Rwanda",
+    "imageSrc": "rw"
+  },
+  "SKN": {
+    "fullName": "Saint Kitts And Nevis",
+    "imageSrc": "kn"
+  },
+  "LCA": {
+    "fullName": "Saint Lucia",
+    "imageSrc": "lc"
+  },
+  "VIN": {
+    "fullName": "Saint Vincent And The Grenadines",
+    "imageSrc": "vc"
+  },
+  "SAM": {
+    "fullName": "Samoa",
+    "imageSrc": "ws"
+  },
+  "SMR": {
+    "fullName": "San Marino",
+    "imageSrc": "sm"
+  },
+  "KSA": {
+    "fullName": "Saudi Arabia",
+    "imageSrc": "sa"
+  },
+  "SEN": {
+    "fullName": "Senegal",
+    "imageSrc": "sn"
+  },
+  "SRB": {
+    "fullName": "Serbia",
+    "imageSrc": "rs"
+  },
+  "SEY": {
+    "fullName": "Seychelles",
+    "imageSrc": "sc"
+  },
+  "SLE": {
+    "fullName": "Sierra Leone",
+    "imageSrc": "sl"
+  },
+  "SIN": {
+    "fullName": "Singapore",
+    "imageSrc": "sg"
+  },
+  "SVK": {
+    "fullName": "Slovakia",
+    "imageSrc": "sk"
+  },
+  "SLO": {
+    "fullName": "Slovenia",
+    "imageSrc": "si"
+  },
+  "SOL": {
+    "fullName": "Solomon Islands",
+    "imageSrc": "sb"
+  },
+  "SOM": {
+    "fullName": "Somalia",
+    "imageSrc": "so"
+  },
+  "RSA": {
+    "fullName": "South Africa",
+    "imageSrc": "za"
+  },
+  "ESP": {
+    "fullName": "Spain",
+    "imageSrc": "es"
+  },
+  "SRI": {
+    "fullName": "Sri Lanka",
+    "imageSrc": "lk"
+  },
+  "SUD": {
+    "fullName": "Sudan",
+    "imageSrc": "sd"
+  },
+  "SUR": {
+    "fullName": "Suriname",
+    "imageSrc": "sr"
+  },
+  "SWZ": {
+    "fullName": "Swaziland",
+    "imageSrc": "sx"
+  },
+  "SWE": {
+    "fullName": "Sweden",
+    "imageSrc": "se"
+  },
+  "SUI": {
+    "fullName": "Switzerland",
+    "imageSrc": "ch"
+  },
+  "SYR": {
+    "fullName": "Syrian Arab Republic",
+    "imageSrc": "ae"
+  },
+  "STP": {
+    "fullName": "São Tomé and Príncipe",
+    "imageSrc": "st"
+  },
+  "TPE": {
+    "fullName": "Taiwan",
+    "imageSrc": "tw"
+  },
+  "TJK": {
+    "fullName": "Tajikistan",
+    "imageSrc": "tj"
+  },
+  "TAN": {
+    "fullName": "Tanzania",
+    "imageSrc": "tz"
+  },
+  "THA": {
+    "fullName": "Thailand",
+    "imageSrc": "th"
+  },
+  "TLS": {
+    "fullName": "Timor-Leste",
+    "imageSrc": "tl"
+  },
+  "TOG": {
+    "fullName": "Togo",
+    "imageSrc": "tg"
+  },
+  "TGA": {
+    "fullName": "Tonga",
+    "imageSrc": "to"
+  },
+  "TRI": {
+    "fullName": "Trinidad And Tobago",
+    "imageSrc": "tt"
+  },
+  "TUN": {
+    "fullName": "Tunisia",
+    "imageSrc": "tn"
+  },
+  "TUR": {
+    "fullName": "Turkey",
+    "imageSrc": "tr"
+  },
+  "TKM": {
+    "fullName": "Turkmenistan",
+    "imageSrc": "tm"
+  },
+  "TUV": {
+    "fullName": "Tuvalu",
+    "imageSrc": "tv"
+  },
+  "UGA": {
+    "fullName": "Uganda",
+    "imageSrc": "ug"
+  },
+  "UKR": {
+    "fullName": "Ukraine",
+    "imageSrc": "ua"
+  },
+  "UAE": {
+    "fullName": "United Arab Emirates",
+    "imageSrc": "ae"
+  },
+  "GBR": {
+    "fullName": "United Kingdom",
+    "imageSrc": "gb"
+  },
+  "USA": {
+    "fullName": "United States",
+    "imageSrc": "us"
+  },
+  "URU": {
+    "fullName": "Uruguay",
+    "imageSrc": "uy"
+  },
+  "UZB": {
+    "fullName": "Uzbekistan",
+    "imageSrc": "uz"
+  },
+  "VAN": {
+    "fullName": "Vanuatu",
+    "imageSrc": "vu"
+  },
+  "VEN": {
+    "fullName": "Venezuela",
+    "imageSrc": "ve"
+  },
+  "VIE": {
+    "fullName": "Viet Nam",
+    "imageSrc": "vn"
+  },
+  "ISV": {
+    "fullName": "Virgin Islands (British)",
+    "imageSrc": "vg"
+  },
+  "ISV": {
+    "fullName": "Virgin Islands (US)",
+    "imageSrc": "vi"
+  },
+  "YEM": {
+    "fullName": "Yemen",
+    "imageSrc": "ye"
+  },
+  "ZAM": {
+    "fullName": "Zambia",
+    "imageSrc": "zm"
+  },
+  "ZIM": {
+    "fullName": "Zimbabwe",
+    "imageSrc": "zw"
+  }
 }
