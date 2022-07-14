@@ -1,76 +1,293 @@
 {
-  "AFG": "Afghanistan",
-  "ALB": "Albania",
-  "ALG": "Algeria",
-  "ASA": "American Samoa",
-  "AND": "Andorra",
-  "ANG": "Angola",
-  "ANT": "Antigua And Barbuda",
-  "ARG": "Argentina",
-  "ARM": "Armenia",
-  "ARU": "Aruba",
-  "SHP": "Ascension Island",
-  "AUS": "Australia",
-  "AUT": "Austria",
-  "AZE": "Azerbaijan",
-  "BAH": "Bahamas",
-  "BRN": "Bahrain",
-  "BAN": "Bangladesh",
-  "BAR": "Barbados",
-  "BLR": "Belarus",
-  "BEL": "Belgium",
-  "BIZ": "Belize",
-  "BEN": "Benin",
-  "BER": "Bermuda",
-  "BHU": "Bhutan",
-  "BOL": "Bolivia",
-  "BIH": "Bosnia & Herzegovina",
-  "BOT": "Botswana",
-  "BRA": "Brazil",
-  "BRU": "Brunei Darussalam",
-  "BUL": "Bulgaria",
-  "BUR": "Burkina Faso",
-  "BDI": "Burundi",
-  "CPV": "Cabo Verde",
-  "CAM": "Cambodia",
-  "CMR": "Cameroon",
-  "CAN": "Canada",
-  "CAY": "Cayman Islands",
-  "CAF": "Central African Republic",
-  "CHA": "Chad",
-  "CHI": "Chile",
-  "CHN": "China",
-  "COL": "Colombia",
-  "COM": "Comoros",
-  "COK": "Cook Islands",
-  "CRC": "Costa Rica",
-  "CIV": "Cote d'Ivoire",
-  "CRO": "Croatia",
-  "CUB": "Cuba",
-  "CYP": "Cyprus",
-  "CZE": "Czech Republic",
-  "COD": "Democratic Republic Of Congo",
-  "DEN": "Denmark",
-  "DJI": "Djibouti",
-  "DMA": "Dominica",
-  "DOM": "Dominican Republic",
-  "ECU": "Ecuador",
-  "EGY": "Egypt",
-  "ESA": "El Salvador",
-  "GEQ": "Equatorial Guinea",
-  "ERI": "Eritrea",
-  "EST": "Estonia",
-  "ETH": "Ethiopia",
-  "FAI": "Faroe Islands",
-  "FIJ": "Fiji",
-  "FIN": "Finland",
-  "FRA": "France",
-  "GAB": "Gabon",
-  "GAM": "Gambia",
-  "GEO": "Georgia",
-  "GER": "Germany",
-  "GHA": "Ghana",
-  "GRE": "Greece",
+  "AFG": {
+    "fullName": "Afghanistan",
+    "imageSrc": "af"
+  },
+  "ALB": {
+    "fullName": "Albania",
+    "imageSrc": "al"
+  },
+
+  "ALG": {
+    "fullName": "Algeria",
+    "imageSrc": "ag"
+  },
+  "ASA": {
+    "fullName": "American Samoa",
+    "imageSrc": "as"
+  },
+  "AND": {
+    "fullName": "Andorra",
+    "imageSrc": "ad"
+  },
+  "ANG": {
+    "fullName": "Angola",
+    "imageSrc": "ag"
+  },
+  "ANT": {
+    "fullName": "Antigua And Barbuda",
+    "imageSrc": "at"
+  },
+  "ARG": {
+    "fullName": "Argentina",
+    "imageSrc": "ar"
+  },
+  "ARM": {
+    "fullName": "Armenia",
+    "imageSrc": "am"
+  },
+  "ARU": {
+    "fullName": "Aruba",
+    "imageSrc": "au"
+  },
+  "SHP": {
+    "fullName": "Ascension Island",
+    "imageSrc": "as"
+  },
+  "AUS": {
+    "fullName": "Australia",
+    "imageSrc": "au"
+  },
+  "AUT": {
+    "fullName": "Austria",
+    "imageSrc": "as"
+  },
+  "AZE": {
+    "fullName": "Azerbaijan",
+    "imageSrc": "az"
+  },
+  "BAH": {
+    "fullName": "Bahamas",
+    "imageSrc": "bh"
+  },
+  "BRN": {
+    "fullName": "Bahrain",
+    "imageSrc": "br"
+  },
+  "BAN": {
+    "fullName": "Bangladesh",
+    "imageSrc": "bn"
+  },
+  "BAR": {
+    "fullName": "Barbados",
+    "imageSrc": "ba"
+  },
+  "BLR": {
+    "fullName": "Belarus",
+    "imageSrc": "bl"
+  },
+  "BEL": {
+    "fullName": "Belgium",
+    "imageSrc": "be"
+  },
+  "BIZ": {
+    "fullName": "Belize",
+    "imageSrc": "bz"
+  },
+  "BEN": {
+    "fullName": "Benin",
+    "imageSrc": "bn"
+  },
+  "BER": {
+    "fullName": "Bermuda",
+    "imageSrc": "bm"
+  },
+  "BHU": {
+    "fullName": "Bhutan",
+    "imageSrc": "bh"
+  },
+  "BOL": {
+    "fullName": "Bolivia",
+    "imageSrc": "bo"
+  },
+  "BIH": {
+    "fullName": "Bosnia & Herzegovina",
+    "imageSrc": "bi"
+  },
+  "BOT": {
+    "fullName": "Botswana",
+    "imageSrc": "bt"
+  },
+  "BRA": {
+    "fullName": "Brazil",
+    "imageSrc": "br"
+  },
+  "BRU": {
+    "fullName": "Brunei Darussalam",
+    "imageSrc": "bi"
+  },
+  "BUL": {
+    "fullName": "Bulgaria",
+    "imageSrc": "bl"
+  },
+  "BUR": {
+    "fullName": "Burkina Faso",
+    "imageSrc": "bf"
+  },
+  "BDI": {
+    "fullName": "Burundi",
+    "imageSrc": "bd"
+  },
+  "CPV": {
+    "fullName": "Cabo Verde",
+    "imageSrc": "cv"
+  },
+  "CAM": {
+    "fullName": "Cambodia",
+    "imageSrc": "cm"
+  },
+  "CMR": {
+    "fullName": "Cameroon",
+    "imageSrc": "cr"
+  },
+  "CAN": {
+    "fullName": "Canada",
+    "imageSrc": "ca"
+  },
+  "CAY": {
+    "fullName": "Cayman Islands",
+    "imageSrc": "cy"
+  },
+  "CAF": {
+    "fullName": "Central African Republic",
+    "imageSrc": "cf"
+  },
+  "CHA": {
+    "fullName": "Chad",
+    "imageSrc": "cd"
+  },
+  "CHI": {
+    "fullName": "Chile",
+    "imageSrc": "cl"
+  },
+  "CHN": {
+    "fullName": "China",
+    "imageSrc": "ch"
+  },
+  "COL": {
+    "fullName": "Colombia",
+    "imageSrc": "co"
+  },
+  "COM": {
+    "fullName": "Comoros",
+    "imageSrc": "cm"
+  },
+  "COK": {
+    "fullName": "Cook Islands",
+    "imageSrc": "ck"
+  },
+  "CRC": {
+    "fullName": "Costa Rica",
+    "imageSrc": "cs"
+  },
+  "CIV": {
+    "fullName": "Cote d'Ivoire",
+    "imageSrc": "ci"
+  },
+  "CRO": {
+    "fullName": "Croatia",
+    "imageSrc": "cr"
+  },
+  "CUB": {
+    "fullName": "Cuba",
+    "imageSrc": "cb"
+  },
+  "CYP": {
+    "fullName": "Cyprus",
+    "imageSrc": "cp"
+  },
+  "CZE": {
+    "fullName": "Czech Republic",
+    "imageSrc": "cz"
+  },
+  "COD": {
+    "fullName": "Democratic Republic Of Congo",
+    "imageSrc": "cc"
+  },
+  "DEN": {
+    "fullName": "Denmark",
+    "imageSrc": "de"
+  },
+  "DJI": {
+    "fullName": "Djibouti",
+    "imageSrc": "dk"
+  },
+  "DMA": {
+    "fullName": "Dominica",
+    "imageSrc": "dm"
+  },
+  "DOM": {
+    "fullName": "Dominican Republic",
+    "imageSrc": "dm"
+  },
+  "ECU": {
+    "fullName": "Ecuador",
+    "imageSrc": "ec"
+  },
+  "EGY": {
+    "fullName": "Egypt",
+    "imageSrc": "eg"
+  },
+  "ESA": {
+    "fullName": "El Salvador",
+    "imageSrc": "es"
+  },
+  "GEQ": {
+    "fullName": "Equatorial Guinea",
+    "imageSrc": "eg"
+  },
+  "ERI": {
+    "fullName": "Eritrea",
+    "imageSrc": "er"
+  },
+  "EST": {
+    "fullName": "Estonia",
+    "imageSrc": "es"
+  },
+  "ETH": {
+    "fullName": "Ethiopia",
+    "imageSrc": "et"
+  },
+  "FAI": {
+    "fullName": "Faroe Islands",
+    "imageSrc": "fi"
+  },
+  "FIJ": {
+    "fullName": "Fiji",
+    "imageSrc": "fj"
+  },
+  "FIN": {
+    "fullName": "Finland",
+    "imageSrc": "fi"
+  },
+  "FRA": {
+    "fullName": "France",
+    "imageSrc": "fr"
+  },
+  "GAB": {
+    "fullName": "Gabon",
+    "imageSrc": "ga"
+  },
+  "GAM": {
+    "fullName": "Gambia",
+    "imageSrc": "gm"
+  },
+  "GEO": {
+    "fullName": "Georgia",
+    "imageSrc": "ge"
+  },
+  "GER": {
+    "fullName": "Germany",
+    "imageSrc": "de"
+  },
+  "GHA": {
+    "fullName": "Ghana",
+    "imageSrc": "gh"
+  },
+  "GRE": {
+    "fullName": "Greece",
+    "imageSrc": "gr"
+  },
   "GRN": "Grenada",
   "GUM": "Guam",
   "GUA": "Guatemala",

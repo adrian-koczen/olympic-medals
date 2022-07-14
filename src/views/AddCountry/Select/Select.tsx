@@ -31,10 +31,15 @@ const Select = ({
     setIsActive((prev) => !prev);
   };
 
-  const handleSelectOption = (countryName: string, countryCode: string) => {
+  const handleSelectOption = (
+    countryName: string,
+    imageSrc: string,
+    countryCode: string
+  ) => {
     handleListVisibility();
     setValue("countryCode", countryCode, false);
     setValue("countryName", countryName, false);
+    setValue("imageSrc", imageSrc, false);
     setError("countryCode", undefined);
   };
 
@@ -50,9 +55,11 @@ const Select = ({
             return (
               <Option
                 key={index}
-                onClick={() => handleSelectOption(value, key)}
+                onClick={() =>
+                  handleSelectOption(value.fullName, value.imageSrc, key)
+                }
               >
-                {value}
+                {value.fullName}
               </Option>
             );
           })}

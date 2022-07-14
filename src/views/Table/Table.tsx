@@ -78,7 +78,13 @@ const Table = () => {
           countries.map((country: Country) => {
             return (
               <TableRow key={country.id}>
-                <CountryNameCell>{country.countryName}</CountryNameCell>
+                <CountryNameWrapper>
+                  <CountryFlag
+                    src={require(`src/data/flags/${country.imageSrc}.svg`)}
+                    alt={country.countryName}
+                  />
+                  <CountryNameCell>{country.countryName}</CountryNameCell>
+                </CountryNameWrapper>
                 <TableCell>{country.medals.gold}</TableCell>
                 <TableCell>{country.medals.silver}</TableCell>
                 <TableCell>{country.medals.bronze}</TableCell>
@@ -111,15 +117,29 @@ const UpArrowIcon = styled(UpArrow)`
   }
 `;
 
+const CountryFlag = styled.img`
+  width: 25px;
+  height: 20px;
+`;
+
 const CountryNameCell = styled.span`
-  min-width: 150px;
   width: 150px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-start;
   padding-left: 10px;
   color: ${({ theme }) => theme.colors.gray};
   font-size: 14px;
+  position: relative;
+  top: 1px;
+`;
+
+const CountryNameWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 150px;
+  padding-left: 10px;
 `;
 
 const TableBody = styled.div`

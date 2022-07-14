@@ -28,6 +28,7 @@ const validationSchema = yup.object().shape({
 const formInitialValue = {
   countryCode: "",
   countryName: "Select country",
+  imageSrc: "",
   medals: {
     total: 0,
     bronze: 0,

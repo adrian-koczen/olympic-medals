@@ -9,6 +9,7 @@ export type Country = {
   id: number;
   countryCode: string;
   countryName: string;
+  imageSrc: string;
   medals: Medals;
 };
 
@@ -17,17 +18,16 @@ export interface State {
 }
 
 export interface IContext {
-  addCountry: ({ countryName, medals }: NewCountry) => void;
+  addCountry: ({
+    countryName,
+    countryCode,
+    imageSrc,
+    medals,
+  }: Omit<Country, "id">) => void;
   getCountriesList: () => Country[] | [];
   saveState: () => void;
 }
 
 export interface Props {
   children: React.ReactElement[];
-}
-
-export interface NewCountry {
-  countryName: string;
-  countryCode: string;
-  medals: Medals;
 }
