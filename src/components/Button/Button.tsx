@@ -7,11 +7,15 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = ({ children, ...props }: Props) => {
-  return <Container type={props.type}>{children}</Container>;
+  return (
+    <Container onClick={props.onClick} type={props.type}>
+      {children}
+    </Container>
+  );
 };
 
 const Container = styled.button`
-  margin: 4px 0;
+  margin: 4px 0px;
   border: none;
   border-radius: 5px;
   font-size: 18px;
@@ -21,6 +25,7 @@ const Container = styled.button`
   padding: 4px 0;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  width: 100%;
 `;
 
 export default Button;

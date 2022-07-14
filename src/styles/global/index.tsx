@@ -11,5 +11,11 @@ export default createGlobalStyle`
   body {
     background-color: #F1F5F8;
     min-width: 375px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
   }
 `;

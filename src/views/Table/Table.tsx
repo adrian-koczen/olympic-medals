@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 // Components
 import Box from "src/components/Box/Box";
+import Button from "src/components/Button/Button";
 // Context
 import { useAppState } from "src/context/AppState";
 import { Country } from "src/context/interfaces";
 // Icons
 import { ReactComponent as DownArrow } from "src/icons/downArrow.svg";
 import { ReactComponent as UpArrow } from "src/icons/upArrow.svg";
+import LoadingSinner from "src/data/loading-spinner.gif";
 
 enum SortBy {
   bronze = "bronze",
@@ -26,12 +28,13 @@ const SortStateInitialVales = {
 };
 
 const Table = () => {
-  const AppState = useAppState();
+  const { appState, clearState, saveState } = useAppState();
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [countries, setCountries] = useState<Country[] | []>([]);
   const [sortState, setSortState] = useState<SortState>(SortStateInitialVales);
 
   const updateCountries = () => {
-    setCountries(AppState.getCountriesList());
+    setCountries(appState.countries);
   };
 
   const sortList = (sortBy: SortBy) => {
@@ -51,7 +54,7 @@ const Table = () => {
 
   useEffect(() => {
     updateCountries();
-  }, []);
+  }, [appState]);
 
   useEffect(() => {
     if (countries.length > 0) {
@@ -77,11 +80,13 @@ const Table = () => {
         {countries &&
           countries.map((country: Country) => {
             return (
-              <TableRow key={country.id}>
+              <TableRow key={country.countryCode}>
                 <CountryNameWrapper>
+                  {!imageLoaded && <LoadingImage src={LoadingSinner} alt="" />}
                   <CountryFlag
-                    src={require(`src/data/flags/${country.imageSrc}.svg`)}
+                    src={`flags/${country.imageSrc}.svg`}
                     alt={country.countryName}
+                    onLoad={() => setImageLoaded(true)}
                   />
                   <CountryNameCell>{country.countryName}</CountryNameCell>
                 </CountryNameWrapper>
@@ -93,9 +98,21 @@ const Table = () => {
             );
           })}
       </TableBody>
+      <Setings>
+        <Button onClick={() => clearState()}>Clear table</Button>
+        <Button onClick={() => saveState()}>Save</Button>
+      </Setings>
     </Box>
   );
 };
+
+const Setings = styled.div`
+  width: 100%;
+  margin-top: 8px;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+`;
 
 const DownArrowIcon = styled(DownArrow)`
   color: ${({ theme }) => theme.colors.darkGray};
@@ -115,6 +132,11 @@ const UpArrowIcon = styled(UpArrow)`
     width: 16px;
     height: 16px;
   }
+`;
+
+const LoadingImage = styled.img`
+  width: 25px;
+  height: 20px;
 `;
 
 const CountryFlag = styled.img`
@@ -145,6 +167,21 @@ const CountryNameWrapper = styled.div`
 const TableBody = styled.div`
   width: 100%;
   box-shadow: -1px 1px 10px 1px rgba(170, 167, 167, 0.75);
+  overflow-y: scroll;
+  max-height: 50vh;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.lightGray};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.darkGray};
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.gray};
+  }
 `;
 
 const TableRow = styled.div`

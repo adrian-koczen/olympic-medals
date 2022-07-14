@@ -76,6 +76,9 @@ const Input = styled.input`
   width: 100%;
   padding: 4px;
   margin: 0 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 `;
 
 export default Medal;

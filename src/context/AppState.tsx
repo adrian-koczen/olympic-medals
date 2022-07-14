@@ -1,16 +1,21 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { IContext, State, Props, Country, Medals } from "./interfaces";
+// Functions
+import { findCountryInArray, countTotalMedals } from "./functions";
 
-const initialValue = {
+const initialAppStateValue = { countries: [] };
+
+const initialContextValue = {
   addCountry: () => {},
-  getCountriesList: () => [],
+  appState: initialAppStateValue,
   saveState: () => {},
+  clearState: () => {},
 };
 
-const Context = createContext<IContext>(initialValue);
+const Context = createContext<IContext>(initialContextValue);
 
 const AppState = ({ children }: Props) => {
-  const [appState, setAppState] = useState<State>({ countries: [] });
+  const [appState, setAppState] = useState<State>(initialAppStateValue);
 
   const loadFromLocalStorage = () => {
     const data = localStorage.getItem("appState");
@@ -27,16 +32,6 @@ const AppState = ({ children }: Props) => {
     loadFromLocalStorage();
   }, []);
 
-  const findCountryInArray = (countryCode: string) => {
-    return appState.countries.findIndex((el, index) => {
-      return el.countryCode === countryCode;
-    });
-  };
-
-  const countTotalMedals = (medals: Medals) => {
-    return Number(medals.bronze) + Number(medals.silver) + Number(medals.gold);
-  };
-
   const addCountry = ({
     countryName,
     countryCode,
@@ -44,7 +39,7 @@ const AppState = ({ children }: Props) => {
     medals,
   }: Omit<Country, "id">) => {
     // Check if country is already in list
-    const isCountryInArrayIndex = findCountryInArray(countryCode);
+    const isCountryInArrayIndex = findCountryInArray(appState, countryCode);
 
     // Generate total number of medals
     const totalMedals = countTotalMedals(medals);
@@ -73,12 +68,13 @@ const AppState = ({ children }: Props) => {
     }
   };
 
-  const getCountriesList = () => {
-    return appState.countries;
+  const clearState = () => {
+    const newState = { ...initialAppStateValue };
+    setAppState(newState);
   };
 
   return (
-    <Context.Provider value={{ addCountry, getCountriesList, saveState }}>
+    <Context.Provider value={{ addCountry, appState, saveState, clearState }}>
       {children}
     </Context.Provider>
   );

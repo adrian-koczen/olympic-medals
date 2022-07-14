@@ -24,8 +24,10 @@ export interface IContext {
     imageSrc,
     medals,
   }: Omit<Country, "id">) => void;
-  getCountriesList: () => Country[] | [];
+  //getCountriesList: () => Country[] | [];
+  appState: State;
   saveState: () => void;
+  clearState: () => void;
 }
 
 export interface Props {
