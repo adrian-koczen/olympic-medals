@@ -79,6 +79,7 @@ const Input = styled.input`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius: 0;
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
