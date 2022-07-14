@@ -30,7 +30,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.typography.normal};
   font-weight: 600;
   margin-bottom: 8px;
   color: ${({ theme }) => theme.colors.grayDark};

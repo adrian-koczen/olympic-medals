@@ -18,7 +18,7 @@ const Container = styled.button`
   margin: 4px 0px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.typography.normal};
   background-color: ${({ theme }) => theme.colors.pink};
   color: ${({ theme }) => theme.colors.white};
   font-weight: 500;

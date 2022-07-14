@@ -152,7 +152,7 @@ const CountryNameCell = styled.span`
   justify-content: flex-start;
   padding-left: 10px;
   color: ${({ theme }) => theme.colors.gray};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.semiSmall};
   position: relative;
   top: 1px;
 `;
@@ -205,7 +205,7 @@ const TableHeader = styled(TableRow)`
     font-size: 9px;
 
     @media (min-width: 450px) {
-      font-size: 14px;
+      font-size: ${({ theme }) => theme.typography.semiSmall};
     }
   }
 `;

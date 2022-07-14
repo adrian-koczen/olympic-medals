@@ -79,6 +79,15 @@ const Input = styled.input`
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  &:focus {
+    outline: 1px solid ${({ theme }) => theme.colors.gray};
+  }
 `;
 
 export default Medal;

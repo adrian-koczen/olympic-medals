@@ -7,6 +7,12 @@ interface Theme {
     pink: string;
     error: string;
   };
+  typography: {
+    normal: string;
+    semiNormal: string;
+    semiSmall: string;
+    small: string;
+  };
 }
 
 const theme: Theme = {
@@ -17,6 +23,12 @@ const theme: Theme = {
     white: "#ffffff",
     pink: "#ED3F58",
     error: "#f7bdbd",
+  },
+  typography: {
+    normal: "18px",
+    semiNormal: "16px",
+    semiSmall: "14px",
+    small: "12px",
   },
 };
 
